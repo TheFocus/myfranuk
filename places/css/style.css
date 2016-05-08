@@ -147,11 +147,12 @@ h3{
 		cursor: pointer;
 	}
 	.flex_parent{
+		width: 100%;
 		display: flex;
-		flex-wrap: wrap;
+		flex-flow: row wrap;
 	}
 	.flex_child{
-		width: 50%;
+		flex-basis: 50%;
 	}
 	article{
 		margin-top: 50px;
@@ -169,5 +170,15 @@ h3{
 }
 .map{
 	float: right;
+}
+@media all and (max-width: 500px){
+.flex_child{
+	flex-basis: 100%;
+}
+.flex_parent{
+
+	flex-direction: column;
+}
+
 }
 /* Media */
