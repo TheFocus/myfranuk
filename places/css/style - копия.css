@@ -148,12 +148,14 @@ h3{
 	}
 	.flex_parent{
 		display: flex;
-		flex-direction: column;
+		flex-flow: row wrap;
+		
 		/*flex-wrap: wrap;*/
 	}
 	.flex_child{
+		flex-basis: 50%;
 		
-		flex-basis: 100%;
+		
 	}
 	article{
 		margin-top: 50px;
@@ -172,18 +174,18 @@ h3{
 .map{
 	float: right;
 }
-@media all and (min-width: 600px) and (max-width: 1000px){
+@media all and (max-width: 600px){
 
 .flex_parent{
-    flex-flow: row wrap;
+    
+	flex-direction: column;
+	flex-wrap: nowrap;
 }
 
 .flex_child{
 	
-	flex-basis: 50%;
+	flex-basis: 100%;
 }
-
-
 }
 /*@media (min-width: 601px) and (max-width: 800px){
 	.flex_parent{
